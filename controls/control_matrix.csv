@@ -1,0 +1,13 @@
+control_id,control_objective,nist_reference,hipaa_related_reference,iso27001_related_reference,test_method,status,evidence_path,assessment_notes,priority
+C-01,Unique user identity,NIST AC-2 / IA-4,HIPAA 164.312(a)(2)(i),ISO 27001 Annex A 5.16 (thematic),Check distinct IDs,PASS,evidence/assessment_results.json,Unique identifiers in local demo,Low
+C-02,Role-based record access,NIST AC-3,HIPAA 164.312(a)(1),ISO 27001 Annex A 8.3 (thematic),Test doctor and patient access,PASS,evidence/assessment_results.json,Simplified access checks only,Medium
+C-03,Least privilege for administrator,NIST AC-6,HIPAA 164.312(a)(1),ISO 27001 Annex A 8.2 (thematic),Deny admin clinical read,PASS,evidence/assessment_results.json,Single local workflow,Medium
+C-04,Disabled account access,NIST AC-2,HIPAA 164.308(a)(3),ISO 27001 Annex A 5.18 (thematic),Test disabled user,PASS,evidence/assessment_results.json,No HR integration,Medium
+C-05,Privileged account MFA,NIST IA-2,HIPAA 164.312(d) (related; does not specifically require MFA),ISO 27001 Annex A 8.5 (thematic),Inspect MFA settings,GAP,evidence/assessment_results.json,Admin fixture has MFA disabled; R-01,High
+C-06,Access event generation,NIST AU-2 / AU-12,HIPAA 164.312(b),ISO 27001 Annex A 8.15 (thematic),Check allowed and denied events,PASS,evidence/assessment_results.json,Events are only in memory,Medium
+C-07,Audit log retention,NIST AU-9 / AU-11,HIPAA 164.312(b) (related),ISO 27001 Annex A 8.15 (thematic),Inspect log storage,GAP,scope/system_design.md,Events disappear on restart; R-02,High
+C-08,Encryption in transit,NIST SC-8,HIPAA 164.312(e),ISO 27001 Annex A 8.24 (thematic),Review TLS settings,NOT ASSESSED,scope/system_design.md,No web service,Medium
+C-09,Encryption at rest,NIST SC-28,HIPAA 164.312(a)(2)(iv) (related),ISO 27001 Annex A 8.24 (thematic),Inspect storage encryption,NOT ASSESSED,scope/system_design.md,No datastore,Medium
+C-10,Access review process,NIST AC-2 / AC-6,HIPAA 164.308(a)(4),ISO 27001 Annex A 5.18 (thematic),Review signed access-review record,NOT ASSESSED,scope/system_design.md,No governance process,Medium
+C-11,Incident response,NIST IR-4,HIPAA 164.308(a)(6),ISO 27001 Annex A 5.26 (thematic),Review response playbook,NOT ASSESSED,scope/system_design.md,No incident program,Medium
+C-12,Backup and recovery,NIST CP-9 / CP-10,HIPAA 164.308(a)(7),ISO 27001 Annex A 8.13 (thematic),Review backup test evidence,NOT ASSESSED,scope/system_design.md,No persistent service,Medium
