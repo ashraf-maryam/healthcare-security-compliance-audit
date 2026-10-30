@@ -1,0 +1,59 @@
+{
+  "system": "SyntheticClinic local in-memory demo",
+  "data_classification": "SYNTHETIC ONLY",
+  "checks": {
+    "doctor_allowed": true,
+    "patient_allowed": true,
+    "disabled_user_denied": true,
+    "administrator_denied": true,
+    "unknown_user_denied": true,
+    "audit_events_recorded": true,
+    "unique_test_user_ids": true,
+    "all_enabled_users_have_mfa": false,
+    "inactive_accounts_identified": true
+  },
+  "mfa_exceptions": [
+    "admin01"
+  ],
+  "disabled_user_ids": [
+    "former01"
+  ],
+  "audit_events": [
+    {
+      "at": "2026-10-30T00:33:29.132991+00:00",
+      "actor": "doc01",
+      "action": "read_record",
+      "record_id": "P-100",
+      "decision": "ALLOW"
+    },
+    {
+      "at": "2026-10-30T00:33:29.133050+00:00",
+      "actor": "patient01",
+      "action": "read_record",
+      "record_id": "P-100",
+      "decision": "ALLOW"
+    },
+    {
+      "at": "2026-10-30T00:33:29.133056+00:00",
+      "actor": "former01",
+      "action": "read_record",
+      "record_id": "P-100",
+      "decision": "DENY"
+    },
+    {
+      "at": "2026-10-30T00:33:29.133059+00:00",
+      "actor": "admin01",
+      "action": "read_record",
+      "record_id": "P-100",
+      "decision": "DENY"
+    },
+    {
+      "at": "2026-10-30T00:33:29.133061+00:00",
+      "actor": "unknown",
+      "action": "read_record",
+      "record_id": "P-100",
+      "decision": "DENY"
+    }
+  ],
+  "note": "A failed check indicates a known demo gap, not a formal compliance finding."
+}
