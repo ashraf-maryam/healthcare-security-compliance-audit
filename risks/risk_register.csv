@@ -1,0 +1,3 @@
+risk_id,finding,control_id,likelihood_1_to_5,impact_1_to_5,score,priority,evidence,proposed_remediation,owner_role,status,evidence_path
+R-01,Active administrator fixture without MFA,C-05,3,4,12,High,admin01 MFA flag is disabled,Require MFA for privileged accounts and test exceptions,Identity owner,Open,evidence/assessment_results.json
+R-02,Audit events lost when process ends,C-07,4,3,12,High,Events stored in Python process memory,Store structured logs in protected durable storage and test retention,Application owner,Open,scope/system_design.md
